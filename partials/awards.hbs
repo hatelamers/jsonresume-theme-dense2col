@@ -1,0 +1,33 @@
+{{#if resume.awards.length}}
+<section id="awards">
+	<h2 class="xfa-icon"> Awards</h2>
+	{{#each resume.awards}}
+	<div class="item">
+			<div class="item-head">
+		{{#if title}}
+		<h3 class="title">
+			{{title}}
+		</h3>
+		{{/if}}
+		{{#if date}}
+		<div class="date">
+			{{year-month date}}
+		</div>
+		{{/if}}				
+			</div>
+			<div class="item-head">
+		{{#if awarder}}
+		<div class="awarder">
+			{{awarder}}
+		</div>
+		{{/if}}
+			</div>
+		{{#if summary}}
+		<div class="summary">
+			<p>{{summary}}</p>
+		</div>
+		{{/if}}
+	</div>
+	{{/each}}
+</section>
+{{/if}}

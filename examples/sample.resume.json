@@ -1,0 +1,170 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Richard Hendriks",
+    "label": "Programmer",
+    "image": "data:image/jpeg;base64,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",
+    "email": "richard.hendriks@mail.com",
+    "phone": "(912) 555-4321",
+    "url": "http://richardhendricks.example.com",
+    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "neutralthoughts",
+        "url": ""
+      },
+      {
+        "network": "SoundCloud",
+        "username": "dandymusicnl",
+        "url": "https://soundcloud.example.com/dandymusicnl"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Pied Piper",
+      "location": "Palo Alto, CA",
+      "description": "Awesome compression company",
+      "position": "CEO/President",
+      "url": "http://piedpiper.example.com",
+      "startDate": "2013-12-01",
+      "endDate": "2014-12-01",
+      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "highlights": [
+        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
+        "Successfully won Techcrunch Disrupt",
+        "Optimized an algorithm that holds the current world record for Weisman Scores"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "CoderDojo",
+      "position": "Teacher",
+      "url": "http://coderdojo.example.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Global movement of free coding clubs for young people.",
+      "highlights": [
+        "Awarded 'Teacher of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Oklahoma",
+      "url": "https://www.ou.edu/",
+      "area": "Information Technology",
+      "studyType": "Bachelor",
+      "startDate": "2011-06-01",
+      "endDate": "2014-01-01",
+      "score": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL",
+        "CS2011 - Java Introduction"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Digital Compression Pioneer Award",
+      "date": "2014-11-01",
+      "awarder": "Techcrunch",
+      "summary": "There is no spoon."
+    }
+  ],
+  "publications": [
+    {
+      "name": "Video compression for 3d media",
+      "publisher": "Hooli",
+      "releaseDate": "2014-10-01",
+      "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
+      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript"
+      ]
+    },
+    {
+      "name": "Compression",
+      "level": "Master",
+      "keywords": [
+        "Mpeg",
+        "MP4",
+        "GIF"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Erlich Bachman",
+      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Miss Direction",
+      "description": "A mapping engine that misguides you",
+      "highlights": [
+        "Won award at AIHacks 2016",
+        "Built by all women team of newbie programmers",
+        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
+      ],
+      "keywords": [
+        "GoogleMaps", "Chrome Extension", "Javascript"
+      ],
+      "startDate": "2016-08-24",
+      "endDate": "2016-08-24",
+      "url": "https://missdirection.example.com",
+      "roles": [
+        "Team lead", "Designer"
+      ],
+      "entity": "Smoogle",
+      "type": "application"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/sample.resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00",
+	"$dense2col": {
+		"locale": "en",
+		"languages": {
+			"English": "en"
+		},
+		"labels": {
+			"Summary": "Introduction"
+		}
+	}
+  }
+}

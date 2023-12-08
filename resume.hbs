@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{lang}}">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+        <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
+
+        <style>
+         {{{css}}}
+		 {{user_css}}
+        </style>
+        <script src="https://kit.fontawesome.com/0e272f671c.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="resume">
+            <div id="sidebar" class="right-align">
+                {{> basics }}
+                {{> education }}
+                {{> skills }}
+                {{> languages }}
+                {{> interests }}
+            </div>
+            <div id="chronology">
+                {{> summary }}
+                {{> work }}
+                {{> volunteer }}
+                {{> publications }}
+                {{> projects }}
+                {{> awards }}
+                {{> references }}
+            </div>
+        </div>
+    </body>
+</html>

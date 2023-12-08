@@ -1,0 +1,68 @@
+{{#if resume.projects.length}}
+<section id="projects">
+	<h2 class="xfa-icon">Projects</h2>
+	{{#each resume.projects}}
+	<div class="item">
+            <div class="item-head">
+		{{#if name}}
+		<h3 class="name">
+			{{name}}
+		</h3>
+		{{/if}}
+		{{#if entity}}
+		<div class="entity">
+			{{entity}}
+		</div>
+		{{/if}}
+            </div>
+            <div class="item-head">
+		{{#if roles.length}}
+		<div class="position">
+            {{#each roles}}{{#unless @first}}, {{/unless}}<span>{{.}}</span>{{/each}}
+		</div>
+		{{/if}}
+		<div class="date">
+			{{#if startDate}}
+			<span class="startDate">
+				{{year-month startDate}}
+			</span>
+			{{/if}}
+			{{#if endDate}}
+			<span class="endDate">
+				- {{year-month endDate}}
+			</span>
+			{{else}}
+			<span class="endDate">
+				- Present
+			</span>
+			{{/if}}
+		</div>
+            </div>
+		{{#if url}}
+ 		<div class="url">
+			<a href="{{url}}">{{url}}</a>
+		</div>
+		{{/if}}
+		{{#if description}}
+		<div class="description">
+			<p>{{description}}</p>
+		</div>
+		{{/if}}
+		{{#if highlights.length}}
+		<ul class="highlights">
+			{{#each highlights}}
+			<li>{{.}}</li>
+			{{/each}}
+		</ul>
+		{{/if}}
+		{{#if keywords.length}}
+		    <ul class="keywords">
+			      {{#each keywords}}
+			          <li>{{.}}</li>
+			      {{/each}}
+		    </ul>
+		{{/if}}
+	</div>
+	{{/each}}
+</section>
+{{/if}}

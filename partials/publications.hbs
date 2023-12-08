@@ -1,0 +1,38 @@
+{{#if resume.publications.length}}
+<section id="publications">
+	<h2 class="xfa-icon"> Publications</h2>
+	{{#each resume.publications}}
+	<div class="item">
+			<div class="item-head">
+		{{#if name}}
+		<h3 class="name">
+			{{name}}
+		</h3>
+		{{/if}}
+		{{#if releaseDate}}
+		<div class="releaseDate">
+			{{year-month-day releaseDate}}
+		</div>
+		{{/if}}
+			</div>
+			<div class="item-head">
+		{{#if publisher}}
+		<div class="publisher">
+			{{publisher}}
+		</div>
+		{{/if}}
+		{{#if website}}
+		<div class="website">
+			<a href="{{website}}">Link</a>
+		</div>
+		{{/if}}
+			</div>
+		{{#if summary}}
+		<div class="summary">
+			<p>{{summary}}</p>
+		</div>
+		{{/if}}
+	</div>
+	{{/each}}
+</section>
+{{/if}}
