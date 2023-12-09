@@ -1,0 +1,35 @@
+{
+	"de": [
+		[
+			"address"
+		], [
+			"postalCode",
+			"city"
+		], [
+			"region",
+			"countryCode"	
+		]
+	],
+	"fr": [
+		[
+			"address"
+		], [
+			"postalCode",
+			"city"
+		], [
+			"region",
+			"countryCode"	
+		]
+	],
+	"en": [
+		[
+			"address"
+		], [
+			"city",
+			"region",
+			"postalCode"
+		], [
+			"countryCode"	
+		]
+	]
+}

@@ -1,6 +1,7 @@
 :root {
     --primary-color: rgb(0, 78, 100);
 	--secodary-color: #aaa;
+	--ternary-color: #707070;
     --sidebar-bg: linear-gradient(180deg, rgb(0, 78, 100) 80%, rgba(0, 78, 100, 0.4) 90%, rgba(255,255,255,0) 100%);
     --sidebar-fg: #aaa;
 }
@@ -68,7 +69,7 @@ body {
 
 div.item {
     break-inside: avoid;
-    margin-top: 0.5em;
+    margin-top: 0.6em;
 }
 section {
     padding-top: 1em;
@@ -77,6 +78,9 @@ section {
 	height: 2ex;
 	vertical-align: text-top;
 	padding-right: 0.2em;
+}
+.junk {
+	display: none;
 }
 
 .xfa-icon {
@@ -163,7 +167,7 @@ section#work, section#projects{
     width: 100%;
 }
 .summary, .description {
-    color: #808080;
+    color: var(--ternary-color);
     text-justify: inter-character;
     text-align: justify;
 }
@@ -241,7 +245,7 @@ section#work, section#projects{
     background-color: #fff;
     padding-left: 10px;
 }
-#chronology h2 {
+#chronology h2, #chronology h3 {
     color: var(--primary-color);
 }
 /* #chronology section:not(#summary, #references) {
@@ -249,7 +253,7 @@ section#work, section#projects{
 	padding-right: 1em;
 } */
 #chronology section:not(#summary, #references) .item {
-	border-top: solid 1px var(--secodary-color);
+	border-top: solid 1px var(--primary-color);
 }
 h1 {
     font-size: 2.9em;
@@ -268,11 +272,13 @@ h3 {
     /*font-size: 1.2em;*/
     font-weight: bold;
 }
+h4 {
+	font-weight: bold;
+}
 img.headshot {
     max-width: 100%;
 }
 .institution {
-    font-weight: bold;
 	display: table-cell;
 }
 .studyType, .area, #education .date {
@@ -284,11 +290,14 @@ img.headshot {
 .date {
     font-style: italic;
 }
-#location .country:before, #location .postal:before, #location .city:before {
-  content: ", ";
+#location .sep:before {
+	content: ', ';
 }
-#skills .name, #interests .name {
-    font-weight: bold;
+@media screen and (max-width: 427px) {
+	#location .sep:before {
+		content: '\A';
+		white-space: pre;
+	}		
 }
 #skills .level {
     font-style: italic;
@@ -322,12 +331,13 @@ img.headshot {
 #languages .fluency:before {
   content: " - ";
 }
-#work .position, #projects .position {
-    /*font-weight: bold;*/
-}
-ul.highlights {
+/*#work .position, #projects .position {
+    font-weight: bold;
+}*/
+.highlights {
     list-style: disc;
+	color: var(--ternary-color);
 }
-ul.highlights li {
+.highlights li {
     margin-left: 1.5em;
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
 
         <meta charset="utf-8">
@@ -11,6 +11,7 @@
          :root {
     --primary-color: rgb(0, 78, 100);
 	--secodary-color: #aaa;
+	--ternary-color: #707070;
     --sidebar-bg: linear-gradient(180deg, rgb(0, 78, 100) 80%, rgba(0, 78, 100, 0.4) 90%, rgba(255,255,255,0) 100%);
     --sidebar-fg: #aaa;
 }
@@ -78,7 +79,7 @@ body {
 
 div.item {
     break-inside: avoid;
-    margin-top: 0.5em;
+    margin-top: 0.6em;
 }
 section {
     padding-top: 1em;
@@ -87,6 +88,9 @@ section {
 	height: 2ex;
 	vertical-align: text-top;
 	padding-right: 0.2em;
+}
+.junk {
+	display: none;
 }
 
 .xfa-icon {
@@ -173,7 +177,7 @@ section#work, section#projects{
     width: 100%;
 }
 .summary, .description {
-    color: #808080;
+    color: var(--ternary-color);
     text-justify: inter-character;
     text-align: justify;
 }
@@ -251,7 +255,7 @@ section#work, section#projects{
     background-color: #fff;
     padding-left: 10px;
 }
-#chronology h2 {
+#chronology h2, #chronology h3 {
     color: var(--primary-color);
 }
 /* #chronology section:not(#summary, #references) {
@@ -259,7 +263,7 @@ section#work, section#projects{
 	padding-right: 1em;
 } */
 #chronology section:not(#summary, #references) .item {
-	border-top: solid 1px var(--secodary-color);
+	border-top: solid 1px var(--primary-color);
 }
 h1 {
     font-size: 2.9em;
@@ -278,11 +282,13 @@ h3 {
     /*font-size: 1.2em;*/
     font-weight: bold;
 }
+h4 {
+	font-weight: bold;
+}
 img.headshot {
     max-width: 100%;
 }
 .institution {
-    font-weight: bold;
 	display: table-cell;
 }
 .studyType, .area, #education .date {
@@ -294,11 +300,14 @@ img.headshot {
 .date {
     font-style: italic;
 }
-#location .country:before, #location .postal:before, #location .city:before {
-  content: ", ";
+#location .sep:before {
+	content: ', ';
 }
-#skills .name, #interests .name {
-    font-weight: bold;
+@media screen and (max-width: 427px) {
+	#location .sep:before {
+		content: '\A';
+		white-space: pre;
+	}		
 }
 #skills .level {
     font-style: italic;
@@ -332,13 +341,14 @@ img.headshot {
 #languages .fluency:before {
   content: " - ";
 }
-#work .position, #projects .position {
-    /*font-weight: bold;*/
-}
-ul.highlights {
+/*#work .position, #projects .position {
+    font-weight: bold;
+}*/
+.highlights {
     list-style: disc;
+	color: var(--ternary-color);
 }
-ul.highlights li {
+.highlights li {
     margin-left: 1.5em;
 }
 
@@ -347,7 +357,7 @@ ul.highlights li {
         <script src="https://kit.fontawesome.com/0e272f671c.js" crossorigin="anonymous"></script>
 
     </head>
-    <body>
+    <body class="resume-en">
         <div id="resume">
             <div id="sidebar" class="right-align">
                 	<h1>Richard Hendriks</h1>
@@ -356,18 +366,14 @@ ul.highlights li {
                 	<section id="basics">
                 		<div class="contact">
                 		<div class="email xfa-icon">
-                			richard.hendriks@mail.com
+                			<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%72%69%63%68%61%72%64%2E%68%65%6E%64%72%69%6B%73%40%6D%61%69%6C%2E%63%6F%6D">richard.hendriks<em class="junk">kc64ig6umci</em>@<em class="junk">cak378f4pd</em>mail.com</a>
                 		</div>
                 		<div class="phone xfa-icon">
-                			(912) 555-4321
+                			<a href="&#116;&#101;&#108;&#58;%28%39%31%32%29%20%35%35%35%2D%34%33%32%31">(<em class="junk">ogau</em>9<em class="junk">etg</em>1<em class="junk">gd31k</em>2<em class="junk">m2ov</em>)<em class="junk">p5gsi</em> <em class="junk">ywx4</em>5<em class="junk">n8r7</em>5<em class="junk">818a</em>5<em class="junk">2wpi</em>-<em class="junk">7nqf</em>4<em class="junk">8oyl</em>3<em class="junk">4k92</em>2<em class="junk">kxfoi</em>1</a>
                 		</div>
                 		</div>
                 		<section id="location">
-                			<div class="xfa-icon"><span class="address">2712 Broadway St</span>
-                			<span class="city">San Francisco</span>
-                            <span class="region">California</span>
-                            <span class="postal">CA 94115</span>
-                            <span class="country">US</span></div>
+                			<div class="xfa-icon"><span class="address">2712 Broadway St</span><span class="sep"></span><span class="city">San Francisco</span> <span class="region">California</span> <span class="postalCode">CA 94115</span><span class="sep"></span><span class="countryCode">US</span></div>
                 		</section>
                 		<section id="profiles">
                       <ul>
@@ -394,9 +400,9 @@ ul.highlights li {
                 	<h2 class="xfa-icon">Education</h2>
                 	<div class="item">
                 			<div class="item-head">
-                		<div class="institution">
+                		<h4 class="institution">
                 			University of Oklahoma
-                		</div>
+                		</h4>
                 		<div class="date">
                 			      <span class="startDate">
                 				        Jun 2011
@@ -426,9 +432,9 @@ ul.highlights li {
                 <section id="skills">
                 	<h2 class="xfa-icon">Skills</h2>
                 	<div class="item">
-                		<div class="name">
+                		<h4 class="name">
                 			Web Development
-                		</div>
+                		</h4>
                 		<div class="level">
                 			<em>Master</em>
                 		</div>
@@ -439,9 +445,9 @@ ul.highlights li {
                 		</ul>
                 	</div>
                 	<div class="item">
-                		<div class="name">
+                		<h4 class="name">
                 			Compression
-                		</div>
+                		</h4>
                 		<div class="level">
                 			<em>Master</em>
                 		</div>
@@ -470,9 +476,9 @@ ul.highlights li {
                 <section id="interests">
                 	<h2 class="xfa-icon">Interests</h2>
                 	<div class="item">
-                		<div class="name">
+                		<h4 class="name">
                 			Wildlife
-                		</div>
+                		</h4>
                 		<ul class="keywords">
                 			<li>Ferrets</li>
                 			<li>Unicorns</li>
@@ -548,7 +554,7 @@ ul.highlights li {
                 	</div>
                 </section>
                 <section id="publications">
-                	<h2 class="xfa-icon"> Publications</h2>
+                	<h2 class="xfa-icon">Publications</h2>
                 	<div class="item">
                 			<div class="item-head">
                 		<h3 class="name">
@@ -611,7 +617,7 @@ ul.highlights li {
                 	</div>
                 </section>
                 <section id="awards">
-                	<h2 class="xfa-icon"> Awards</h2>
+                	<h2 class="xfa-icon">Awards</h2>
                 	<div class="item">
                 			<div class="item-head">
                 		<h3 class="title">
