@@ -3,41 +3,18 @@
 	<h2 class="xfa-icon">{{label-lookup "Projects"}}</h2>
 	{{#each resume.projects}}
 	<div class="item">
-            <div class="item-head">
-		{{#if name}}
-		<h3 class="name">
-			{{name}}
-		</h3>
+		{{#if (or name entity)}}
+        <div class="item-head">
+			<h3 class="name part">{{name}}</h3>
+			<div class="entity part">{{entity}}</div>
+        </div>
 		{{/if}}
-		{{#if entity}}
-		<div class="entity">
-			{{entity}}
-		</div>
+		{{#if (or roles.length date)}}
+        <div class="item-head">
+			<div class="position part">{{#if roles.length}}{{#each roles}}{{#unless @first}}, {{/unless}}<span>{{.}}</span>{{/each}}{{/if}}</div>
+			<div class="date part">{{> datespan}}</div>
+        </div>
 		{{/if}}
-            </div>
-            <div class="item-head">
-		{{#if roles.length}}
-		<div class="position">
-            {{#each roles}}{{#unless @first}}, {{/unless}}<span>{{.}}</span>{{/each}}
-		</div>
-		{{/if}}
-		<div class="date">
-			{{#if startDate}}
-			<span class="startDate">
-				{{year-month startDate}}
-			</span>
-			{{/if}}
-			{{#if endDate}}
-			<span class="endDate">
-				- {{year-month endDate}}
-			</span>
-			{{else}}
-			<span class="endDate">
-				- Present
-			</span>
-			{{/if}}
-		</div>
-            </div>
 		{{#if url}}
  		<div class="url">
 			<a href="{{url}}">{{url}}</a>

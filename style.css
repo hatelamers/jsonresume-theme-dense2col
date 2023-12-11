@@ -141,28 +141,18 @@ section#work, section#projects{
 #chronology .item {
     width: 100%;
 }
-#chronology .item .name,
-#chronology .item .date,
-#chronology .item .title,
-#chronology .entity,
-#chronology .company,
-#chronology .awarder,
-#chronology .position,
-#chronology .releaseDate,
-#chronology .publisher,
-#chronology .website {
+#chronology .item-head .part {
     display: table-cell;
 }
-#chronology .date,
-#chronology .releaseDate,
-#chronology .entity {
+#chronology .item-head .part:last-child {
     text-align: right;
 }
 #chronology .date {
     white-space: nowrap;
 }
-.summary, .description, #chronology .item-head,
-#chronology .url {
+.summary, .description,
+#chronology .item-head,
+#chronology .url, #chronology .website {
     display: table;
     width: 100%;
 }

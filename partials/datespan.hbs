@@ -1,0 +1,8 @@
+{{#if startDate}}
+<span class="startDate">{{year-month startDate}}</span>
+{{/if}}
+{{#if endDate}}
+<span class="endDate"> - {{year-month endDate}}</span>
+{{else}}
+<span class="endDate"> - {{label-lookup "Now"}}</span>
+{{/if}}

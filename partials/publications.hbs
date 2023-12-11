@@ -3,22 +3,16 @@
 	<h2 class="xfa-icon">{{label-lookup "Publications"}}</h2>
 	{{#each resume.publications}}
 	<div class="item">
-			<div class="item-head">
-		{{#if name}}
-		<h3 class="name">
-			{{name}}
-		</h3>
-		{{/if}}
-		{{#if releaseDate}}
-		<div class="releaseDate">
-			{{year-month-day releaseDate}}
+		{{#if (or name releaseDate)}}
+		<div class="item-head">
+			<h3 class="name part">{{name}}</h3>
+			<div class="releaseDate part">{{year-month-day releaseDate}}</div>
 		</div>
 		{{/if}}
-			</div>
-			<div class="item-head">
 		{{#if publisher}}
-		<div class="publisher">
-			{{publisher}}
+		<div class="item-head">
+			<div class="publisher part">{{publisher}}</div>
+			<div class="part"></div>
 		</div>
 		{{/if}}
 		{{#if website}}
@@ -26,7 +20,6 @@
 			<a href="{{website}}">Link</a>
 		</div>
 		{{/if}}
-			</div>
 		{{#if summary}}
 		<div class="summary">
 			<p>{{summary}}</p>

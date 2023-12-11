@@ -3,33 +3,16 @@
 	  <h2 class="xfa-icon">{{label-lookup "Volunteer"}}</h2>
 	{{#each resume.volunteer}}
 	<div class="item">
-			<div class="item-head">
-		{{#if organization}}
-		<h3 class="company">
-			{{organization}}
-		</h3>
-		{{/if}}
-		<div class="date">
-			{{#if startDate}}
-			<span class="startDate">
-				{{year-month startDate}}
-			</span>
-			{{/if}}
-			{{#if endDate}}
-			<span class="endDate">
-				- {{year-month endDate}}
-			</span>
-			{{else}}
-			<span class="endDate">
-				- Present
-			</span>
-			{{/if}}
+		{{#if (or organization date)}}
+		<div class="item-head">
+			<h3 class="company part">{{organization}}</h3>
+			<div class="date part">{{> datespan}}</div>
 		</div>
-			</div>
-			<div class="item-head">
+		{{/if}}
 		{{#if position}}
-		<div class="position">
-			{{position}}
+		<div class="item-head">
+			<div class="position part">{{position}}</div>
+			<div class="part"></div>
 		</div>
 		{{/if}}
 		{{#if website}}
@@ -37,7 +20,6 @@
 			<a href="{{website}}">{{website}}</a>
 		</div>
 		{{/if}}
-			</div>
 		{{#if summary}}
 		<div class="summary">
 			<p>{{summary}}</p>

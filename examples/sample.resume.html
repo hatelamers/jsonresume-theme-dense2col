@@ -149,28 +149,18 @@
     #chronology .item {
         width: 100%;
     }
-    #chronology .item .name,
-    #chronology .item .date,
-    #chronology .item .title,
-    #chronology .entity,
-    #chronology .company,
-    #chronology .awarder,
-    #chronology .position,
-    #chronology .releaseDate,
-    #chronology .publisher,
-    #chronology .website {
+    #chronology .item-head .part {
         display: table-cell;
     }
-    #chronology .date,
-    #chronology .releaseDate,
-    #chronology .entity {
+    #chronology .item-head .part:last-child {
         text-align: right;
     }
     #chronology .date {
         white-space: nowrap;
     }
-    .summary, .description, #chronology .item-head,
-    #chronology .url {
+    .summary, .description,
+    #chronology .item-head,
+    #chronology .url, #chronology .website {
         display: table;
         width: 100%;
     }
@@ -364,10 +354,10 @@
 
                 <section id="basics">
                     <div class="contact">
-                        <div class="email xfa-icon">	<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%72%69%63%68%61%72%64%2E%68%65%6E%64%72%69%6B%73%40%6D%61%69%6C%2E%63%6F%6D">richard.hendriks<em class="junk">ppm1eo34oj</em>@<em class="junk">o8g11qxqe8</em>mail.com</a>
+                        <div class="email xfa-icon">	<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%72%69%63%68%61%72%64%2E%68%65%6E%64%72%69%6B%73%40%6D%61%69%6C%2E%63%6F%6D">richard.hendriks<em class="junk">3swretorg8</em>@<em class="junk">vhwi2al62n</em>mail.com</a>
 
                         </div>
-                        <div class="phone xfa-icon">	<a href="&#116;&#101;&#108;&#58;%28%39%31%32%29%20%35%35%35%2D%34%33%32%31">(<em class="junk">z5xol</em>9<em class="junk">2gasf</em>1<em class="junk">ljgf</em>2<em class="junk">snkp</em>)<em class="junk">ugwm</em> <em class="junk">wca9</em>5<em class="junk">zuu5</em>5<em class="junk">ovq9</em>5<em class="junk">axs8</em>-<em class="junk">ptaw</em>4<em class="junk">04by</em>3<em class="junk">vnvb</em>2<em class="junk">cn93</em>1</a>
+                        <div class="phone xfa-icon">	<a href="&#116;&#101;&#108;&#58;%28%39%31%32%29%20%35%35%35%2D%34%33%32%31">(<em class="junk">t4j7i</em>9<em class="junk">49hxh</em>1<em class="junk">xjgi</em>2<em class="junk">b6wl</em>)<em class="junk">nf1l</em> <em class="junk">h6tq</em>5<em class="junk">fh2w</em>5<em class="junk">293n</em>5<em class="junk">efxi</em>-<em class="junk">c0dd</em>4<em class="junk">2gqo</em>3<em class="junk">87nj</em>2<em class="junk">cwxm</em>1</a>
 
                         </div>
                     </div>
@@ -512,21 +502,16 @@
 
                     <div class="item">
                         <div class="item-head">
-                            	<h3 class="name">
-                			Pied Piper
-                		</h3>
+                            	<h3 class="name part">Pied Piper</h3>
 
-                            <div class="date">	<span class="startDate">
-                				Dec 2013
-                			</span>
-	<span class="endDate">
-                				- Dec 2014
-                			</span>
-
-                            </div>
+                            <div class="location part">Palo Alto, CA</div>
                         </div>
                         <div class="item-head">
-                            <div class="position">CEO/President</div>
+                            <div class="position part">CEO/President</div>
+                            <div class="date part"><span class="startDate">Dec 2013</span>
+ <span class="endDate"> - Dec 2014</span>
+
+                            </div>
                         </div>
                         <div class="summary">
                             <p>Pied Piper is a multi-platform technology based on a proprietary universal
@@ -543,76 +528,20 @@
                         </ul>
                     </div>
                 </section>
-                <section id="volunteer">
-                     <h2 class="xfa-icon">Volunteer</h2>
-
-                    <div class="item">
-                        <div class="item-head">
-                            	<h3 class="company">
-                			CoderDojo
-                		</h3>
-
-                            <div class="date">	<span class="startDate">
-                				Jan 2012
-                			</span>
-	<span class="endDate">
-                				- Jan 2013
-                			</span>
-
-                            </div>
-                        </div>
-                        <div class="item-head">
-                            <div class="position">Teacher</div>
-                        </div>
-                        <div class="summary">
-                            <p>Global movement of free coding clubs for young people.</p>
-                        </div>
-                        <ul class="highlights">
-                            <li>Awarded &#x27;Teacher of the Month&#x27;</li>
-                        </ul>
-                    </div>
-                </section>
-                <section id="publications">
-                    	<h2 class="xfa-icon">Publications</h2>
-
-                    <div class="item">
-                        <div class="item-head">
-                            	<h3 class="name">
-                			Video compression for 3d media
-                		</h3>
-
-                            <div class="releaseDate">Oct 1, 2014</div>
-                        </div>
-                        <div class="item-head">
-                            <div class="publisher">Hooli</div>
-                        </div>
-                        <div class="summary">
-                            <p>Innovative middle-out compression algorithm that changes the way we store
-                                data.</p>
-                        </div>
-                    </div>
-                </section>
                 <section id="projects">
                     	<h2 class="xfa-icon">Projects</h2>
 
                     <div class="item">
                         <div class="item-head">
-                            	<h3 class="name">
-                			Miss Direction
-                		</h3>
+                            	<h3 class="name part">Miss Direction</h3>
 
-                            <div class="entity">Smoogle</div>
+                            <div class="entity part">Smoogle</div>
                         </div>
                         <div class="item-head">
-                            <div class="position"> <span>Team lead</span>, <span>Designer</span>
-
+                            <div class="position part"><span>Team lead</span>, <span>Designer</span>
                             </div>
-                            <div class="date">	<span class="startDate">
-                				Aug 2016
-                			</span>
-	<span class="endDate">
-                				- Aug 2016
-                			</span>
+                            <div class="date part"><span class="startDate">Aug 2016</span>
+ <span class="endDate"> - Aug 2016</span>
 
                             </div>
                         </div>
@@ -634,19 +563,61 @@
                         </ul>
                     </div>
                 </section>
+                <section id="volunteer">
+                     <h2 class="xfa-icon">Volunteer</h2>
+
+                    <div class="item">
+                        <div class="item-head">
+                            	<h3 class="company part">CoderDojo</h3>
+
+                            <div class="date part"><span class="startDate">Jan 2012</span>
+ <span class="endDate"> - Jan 2013</span>
+
+                            </div>
+                        </div>
+                        <div class="item-head">
+                            <div class="position part">Teacher</div>
+                            <div class="part"></div>
+                        </div>
+                        <div class="summary">
+                            <p>Global movement of free coding clubs for young people.</p>
+                        </div>
+                        <ul class="highlights">
+                            <li>Awarded &#x27;Teacher of the Month&#x27;</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="publications">
+                    	<h2 class="xfa-icon">Publications</h2>
+
+                    <div class="item">
+                        <div class="item-head">
+                            	<h3 class="name part">Video compression for 3d media</h3>
+
+                            <div class="releaseDate part">Oct 1, 2014</div>
+                        </div>
+                        <div class="item-head">
+                            <div class="publisher part">Hooli</div>
+                            <div class="part"></div>
+                        </div>
+                        <div class="summary">
+                            <p>Innovative middle-out compression algorithm that changes the way we store
+                                data.</p>
+                        </div>
+                    </div>
+                </section>
                 <section id="awards">
                     	<h2 class="xfa-icon">Awards</h2>
 
                     <div class="item">
                         <div class="item-head">
-                            	<h3 class="title">
-                			Digital Compression Pioneer Award
-                		</h3>
+                            	<h3 class="title part">Digital Compression Pioneer Award</h3>
 
-                            <div class="date">Nov 2014</div>
+                            <div class="date part">Nov 2014</div>
                         </div>
                         <div class="item-head">
-                            <div class="awarder">Techcrunch</div>
+                            <div class="awarder part">Techcrunch</div>
+                            <div class="part"></div>
                         </div>
                         <div class="summary">
                             <p>There is no spoon.</p>

@@ -57,6 +57,16 @@ function render(resume) {
 	Handlebars.registerHelper('address-intl', addressFormat);
 	Handlebars.registerHelper('email-link', emailLink);
 	Handlebars.registerHelper('tel-link', telLink);
+	Handlebars.registerHelper({
+		eq  : function(){ return reduceOp(arguments, (a,b) => a === b); },
+		ne  : function(){ return reduceOp(arguments, (a,b) => a !== b); },
+		lt  : function(){ return reduceOp(arguments, (a,b) => a  <  b); },
+		gt  : function(){ return reduceOp(arguments, (a,b) => a  >  b); },
+		lte : function(){ return reduceOp(arguments, (a,b) => a  <= b); },
+		gte : function(){ return reduceOp(arguments, (a,b) => a  >= b); },
+		and : function(){ return reduceOp(arguments, (a,b) => a  && b); },
+		or  : function(){ return reduceOp(arguments, (a,b) => a  || b); }
+	});
 
 	return Handlebars.compile(tpl)({
 		css: css,
@@ -64,6 +74,13 @@ function render(resume) {
 		lang: lang,
 		resume: resume
 	});
+}
+
+function reduceOp(args, reducer) {
+	args = Array.from(args);
+	args.pop(); // => options
+	var first = args.shift();
+	return args.reduce(reducer, first);
 }
 
 function langFlag(lang, options) {
