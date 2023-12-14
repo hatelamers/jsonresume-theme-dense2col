@@ -67,6 +67,7 @@ function render(resume) {
 		and : function(){ return reduceOp(arguments, (a,b) => a  && b); },
 		or  : function(){ return reduceOp(arguments, (a,b) => a  || b); }
 	});
+	Handlebars.registerHelper('raw', hmrUnharden);
 
 	return Handlebars.compile(tpl)({
 		css: css,

@@ -141,13 +141,16 @@ section#work, section#projects{
 #chronology .item {
     width: 100%;
 }
-#chronology .item-head .part {
+.item-head .part {
     display: table-cell;
 }
-#chronology .item-head .part:last-child {
+.item-head .part:first-child {
+	padding-right: 0.5em;
+}
+.item-head .part:last-child {
     text-align: right;
 }
-#chronology .date {
+.date {
     white-space: nowrap;
 }
 .summary, .description,
@@ -267,15 +270,6 @@ h4 {
 }
 img.headshot {
     max-width: 100%;
-}
-.institution {
-	display: table-cell;
-}
-.studyType, .area, #education .date {
-	display: table-cell;
-}
-.area, #education .date {
-	padding-left: 0.5em;
 }
 .date {
     font-style: italic;

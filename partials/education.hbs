@@ -3,44 +3,21 @@
 	<h2 class="xfa-icon">{{label-lookup "Education"}}</h2>
 	{{#each resume.education}}
 	<div class="item">
-			<div class="item-head">
 		{{#if institution}}
-		<h4 class="institution">
-			{{institution}}
-		</h4>
+		<h4 class="institution part">{{institution}}</h4>
 		{{/if}}
-		<div class="date">
-			  {{#if startDate}}
-			      <span class="startDate">
-				        {{year-month startDate}}
-			      </span>
-			  {{/if}}
-			  {{#if endDate}}
-			      <span class="endDate">
-				        - {{year-month endDate}}
-			      </span>
-			  {{else}}
-			      <span class="endDate">
-				        - Present
-			      </span>
-			  {{/if}}
-		</div>
-			</div>
-			<div class="item-head">
-		{{#if studyType}}
-		    <div class="studyType">
-			      {{studyType}}
-		    </div>
-		{{/if}}
-		{{#if area}}
-		<div class="area">
-			{{area}}
+		{{#if (or studyType area)}}
+		<div class="item-head">
+	    	<div class="studyType part">{{studyType}}</div>
+			<div class="area part">{{area}}</div>
 		</div>
 		{{/if}}
+		{{#if (or (raw score) startDate endDate)}}
+		<div class="item-head">
+			<div class="gpa part">
+				{{#if (raw score)}}{{label-lookup "GPA"}}: {{score}}{{/if}}
 			</div>
-		{{#if score}}
-		<div class="gpa">
-			GPA: {{score}}
+			<div class="date part">{{> datespan}}</div>
 		</div>
 		{{/if}}
 		{{#if courses.length}}
